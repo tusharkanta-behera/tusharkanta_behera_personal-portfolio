@@ -35,48 +35,48 @@ export const Contact = () => {
   const socialLinks = [
     {
       name: "Email",
-      icon: <Mail className="w-6 h-6" />,
+      icon: <Mail className="w-5 h-5 sm:w-6 sm:h-6" />,
       url: "mailto:tusharkanta.behera@example.com",
       color: "from-red-500 to-red-600"
     },
     {
       name: "GitHub",
-      icon: <Github className="w-6 h-6" />,
+      icon: <Github className="w-5 h-5 sm:w-6 sm:h-6" />,
       url: "https://github.com/tusharkanta",
-      color: "from-gray-700 to-gray-900"
+      color: "from-gray-600 to-gray-800"
     },
     {
       name: "LinkedIn",
-      icon: <Linkedin className="w-6 h-6" />,
+      icon: <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />,
       url: "https://linkedin.com/in/tusharkanta-behera",
       color: "from-blue-600 to-blue-700"
     }
   ];
 
   return (
-    <div className="min-h-screen py-20 px-6 bg-gray-50/50 dark:bg-gray-900/50">
+    <div className="min-h-screen py-16 sm:py-20 px-4 sm:px-6 bg-gray-900/50">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">Touch</span>
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+            Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Touch</span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400">Let's collaborate on your next project</p>
+          <p className="text-lg sm:text-xl text-gray-300">Let's collaborate on your next project</p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-start">
           {/* Contact Form */}
-          <div className="bg-white/10 dark:bg-gray-800/50 backdrop-blur-lg border border-gray-200/20 dark:border-gray-700/30 rounded-2xl p-8">
+          <div className="bg-white/5 backdrop-blur-lg border border-gray-700/30 rounded-2xl p-6 sm:p-8 order-2 lg:order-1">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg">
-                <MessageCircle className="w-6 h-6 text-white" />
+              <div className="p-2 sm:p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg">
+                <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Send a Message</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-white">Send a Message</h3>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
                     Name
                   </label>
                   <input
@@ -85,12 +85,12 @@ export const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/50 dark:bg-gray-800/50 border border-gray-300/50 dark:border-gray-600/50 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-800/50 border border-gray-600/50 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-white placeholder-gray-400"
                     placeholder="Your name"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
                     Email
                   </label>
                   <input
@@ -99,14 +99,14 @@ export const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/50 dark:bg-gray-800/50 border border-gray-300/50 dark:border-gray-600/50 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-800/50 border border-gray-600/50 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-white placeholder-gray-400"
                     placeholder="your@email.com"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label className="block text-sm font-medium text-gray-300 mb-2">
                   Subject
                 </label>
                 <input
@@ -115,13 +115,13 @@ export const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-white/50 dark:bg-gray-800/50 border border-gray-300/50 dark:border-gray-600/50 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-800/50 border border-gray-600/50 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-white placeholder-gray-400"
                   placeholder="Project collaboration"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label className="block text-sm font-medium text-gray-300 mb-2">
                   Message
                 </label>
                 <textarea
@@ -129,8 +129,8 @@ export const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  rows={6}
-                  className="w-full px-4 py-3 bg-white/50 dark:bg-gray-800/50 border border-gray-300/50 dark:border-gray-600/50 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none"
+                  rows={5}
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-800/50 border border-gray-600/50 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none text-white placeholder-gray-400"
                   placeholder="Tell me about your project..."
                 />
               </div>
@@ -138,13 +138,13 @@ export const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                className="w-full px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
               >
                 {isSubmitting ? (
-                  <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                  <div className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                 ) : (
                   <>
-                    <Send className="w-5 h-5" />
+                    <Send className="w-4 h-4 sm:w-5 sm:h-5" />
                     <span>Send Message</span>
                   </>
                 )}
@@ -153,19 +153,19 @@ export const Contact = () => {
           </div>
 
           {/* Contact Info & AI Avatar */}
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8 order-1 lg:order-2">
             {/* Floating AI Avatar */}
             <div className="relative">
-              <div className="w-64 h-64 mx-auto relative">
+              <div className="w-48 h-48 sm:w-64 sm:h-64 mx-auto relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-600 rounded-full animate-spin-slow opacity-20"></div>
-                <div className="absolute inset-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center text-white text-4xl font-bold animate-pulse">
+                <div className="absolute inset-3 sm:inset-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center text-white text-2xl sm:text-4xl font-bold animate-pulse">
                   AI
                 </div>
                 {/* Floating particles around avatar */}
                 {[...Array(6)].map((_, i) => (
                   <div
                     key={i}
-                    className="absolute w-2 h-2 bg-cyan-400 rounded-full animate-ping"
+                    className="absolute w-1.5 h-1.5 sm:w-2 sm:h-2 bg-cyan-400 rounded-full animate-ping"
                     style={{
                       top: `${30 + Math.sin(i * Math.PI / 3) * 20}%`,
                       left: `${30 + Math.cos(i * Math.PI / 3) * 20}%`,
@@ -174,16 +174,16 @@ export const Contact = () => {
                   />
                 ))}
               </div>
-              <div className="text-center mt-6">
-                <p className="text-gray-600 dark:text-gray-400 text-sm">
+              <div className="text-center mt-4 sm:mt-6">
+                <p className="text-gray-400 text-xs sm:text-sm px-4">
                   AI-powered assistant ready to help with your inquiries
                 </p>
               </div>
             </div>
 
             {/* Social Links */}
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white text-center mb-6">
+            <div className="space-y-3 sm:space-y-4">
+              <h3 className="text-lg sm:text-xl font-bold text-white text-center mb-4 sm:mb-6">
                 Connect With Me
               </h3>
               {socialLinks.map((link, index) => (
@@ -192,14 +192,14 @@ export const Contact = () => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-4 p-4 bg-white/10 dark:bg-gray-800/50 backdrop-blur-lg border border-gray-200/20 dark:border-gray-700/30 rounded-xl hover:border-blue-500/50 transition-all duration-300 group hover:transform hover:scale-105"
+                  className="flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 bg-white/5 backdrop-blur-lg border border-gray-700/30 rounded-xl hover:border-blue-500/50 transition-all duration-300 group hover:transform hover:scale-105"
                 >
-                  <div className={`p-3 bg-gradient-to-r ${link.color} rounded-lg group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`p-2 sm:p-3 bg-gradient-to-r ${link.color} rounded-lg group-hover:scale-110 transition-transform duration-300`}>
                     {link.icon}
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-white">{link.name}</h4>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm">
+                  <div className="min-w-0 flex-1">
+                    <h4 className="font-semibold text-white text-sm sm:text-base">{link.name}</h4>
+                    <p className="text-gray-400 text-xs sm:text-sm truncate">
                       {link.name === "Email" ? "tusharkanta.behera@example.com" :
                        link.name === "GitHub" ? "github.com/tusharkanta" :
                        "linkedin.com/in/tusharkanta-behera"}
