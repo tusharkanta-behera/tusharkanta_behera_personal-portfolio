@@ -4,10 +4,9 @@ import { Menu, X } from "lucide-react";
 
 interface NavigationProps {
   activeSection: string;
-  darkMode: boolean;
 }
 
-export const Navigation = ({ activeSection, darkMode }: NavigationProps) => {
+export const Navigation = ({ activeSection }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -39,10 +38,10 @@ export const Navigation = ({ activeSection, darkMode }: NavigationProps) => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled 
-        ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border-b border-gray-200/20 dark:border-gray-700/30' 
+        ? 'bg-gray-900/80 backdrop-blur-lg border-b border-gray-700/30' 
         : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div 
@@ -52,19 +51,20 @@ export const Navigation = ({ activeSection, darkMode }: NavigationProps) => {
             <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">TB</span>
             </div>
-            <span className="font-bold text-xl text-gray-900 dark:text-white">Tusharkanta</span>
+            <span className="font-bold text-lg sm:text-xl text-white hidden sm:block">Tusharkanta</span>
+            <span className="font-bold text-lg text-white sm:hidden">TB</span>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
                 className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 ${
                   activeSection === item.id
-                    ? 'text-blue-500 dark:text-blue-400'
-                    : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
+                    ? 'text-blue-400'
+                    : 'text-gray-400 hover:text-white'
                 }`}
               >
                 {item.label}
@@ -78,7 +78,7 @@ export const Navigation = ({ activeSection, darkMode }: NavigationProps) => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
+            className="md:hidden p-2 text-gray-400 hover:text-white transition-colors duration-200"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -86,7 +86,7 @@ export const Navigation = ({ activeSection, darkMode }: NavigationProps) => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200/20 dark:border-gray-700/30">
+          <div className="md:hidden py-4 border-t border-gray-700/30">
             <div className="flex flex-col space-y-2">
               {navItems.map((item) => (
                 <button
@@ -94,8 +94,8 @@ export const Navigation = ({ activeSection, darkMode }: NavigationProps) => {
                   onClick={() => scrollToSection(item.id)}
                   className={`text-left px-3 py-2 rounded-lg transition-all duration-200 ${
                     activeSection === item.id
-                      ? 'bg-blue-500/20 text-blue-500 dark:text-blue-400'
-                      : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white'
+                      ? 'bg-blue-500/20 text-blue-400'
+                      : 'text-gray-400 hover:bg-gray-800 hover:text-white'
                   }`}
                 >
                   {item.label}

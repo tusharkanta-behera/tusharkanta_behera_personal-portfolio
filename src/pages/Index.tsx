@@ -6,16 +6,10 @@ import { Projects } from "@/components/Projects";
 import { Skills } from "@/components/Skills";
 import { Contact } from "@/components/Contact";
 import { Navigation } from "@/components/Navigation";
-import { ParticleSystem } from "@/components/ParticleSystem";
-import { ThemeToggle } from "@/components/ThemeToggle";
+import { SpaceBackground } from "@/components/SpaceBackground";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("hero");
-  const [darkMode, setDarkMode] = useState(true);
-
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", darkMode);
-  }, [darkMode]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,10 +33,9 @@ const Index = () => {
   }, []);
 
   return (
-    <div className={`min-h-screen transition-all duration-500 ${darkMode ? 'dark bg-gray-900' : 'bg-gray-50'}`}>
-      <ParticleSystem />
-      <Navigation activeSection={activeSection} darkMode={darkMode} />
-      <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
+    <div className="min-h-screen bg-gray-900 text-white overflow-x-hidden">
+      <SpaceBackground />
+      <Navigation activeSection={activeSection} />
       
       <main className="relative z-10">
         <section id="hero">
