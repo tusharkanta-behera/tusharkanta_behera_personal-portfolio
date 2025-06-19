@@ -51,8 +51,7 @@ export const Navigation = ({ activeSection }: NavigationProps) => {
             <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">TB</span>
             </div>
-            <span className="font-bold text-lg sm:text-xl text-white hidden sm:block">Tusharkanta</span>
-            <span className="font-bold text-lg text-white sm:hidden">TB</span>
+            <span className="font-bold text-lg text-white">Tusharkanta Behera</span>
           </div>
 
           {/* Desktop Navigation */}

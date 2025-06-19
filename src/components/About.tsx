@@ -46,7 +46,7 @@ export const About = () => {
                 <div className="absolute inset-0 backface-hidden bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-lg border border-blue-500/30 rounded-2xl p-6 sm:p-8 flex flex-col items-center justify-center text-center">
                   <div className="w-32 h-32 sm:w-40 sm:h-40 mb-4 sm:mb-6 rounded-full overflow-hidden border-4 border-gradient-to-r from-blue-500 to-cyan-500 bg-gradient-to-r from-blue-500 to-cyan-500 p-1">
                     <img
-                      src="/lovable-uploads/f43bf002-81d1-4955-8f29-4894e90b5f65.png"
+                      src="/lovable-uploads/dba53566-a3a2-4b80-99fc-04fd6c4e984e.png"
                       alt="Tusharkanta Behera"
                       className="w-full h-full object-cover rounded-full"
                     />

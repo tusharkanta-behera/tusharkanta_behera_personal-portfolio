@@ -43,7 +43,7 @@ export const Hero = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-600 rounded-2xl rotate-45 animate-spin-slow"></div>
           <div className="absolute inset-1 sm:inset-2 bg-gray-900 rounded-2xl flex items-center justify-center overflow-hidden">
             <img
-              src="/lovable-uploads/f43bf002-81d1-4955-8f29-4894e90b5f65.png"
+              src="/lovable-uploads/6470e9b8-1d2f-4c8e-bf7d-4244f503c546.png"
               alt="Tusharkanta Behera"
               className="w-full h-full object-cover rounded-xl"
             />
