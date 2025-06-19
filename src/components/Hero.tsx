@@ -41,10 +41,12 @@ export const Hero = () => {
           className="mb-6 sm:mb-8 mx-auto w-32 h-32 sm:w-48 sm:h-48 relative transition-transform duration-300 ease-out"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-600 rounded-2xl rotate-45 animate-spin-slow"></div>
-          <div className="absolute inset-1 sm:inset-2 bg-gray-900 rounded-2xl flex items-center justify-center">
-            <div className="text-2xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              TB
-            </div>
+          <div className="absolute inset-1 sm:inset-2 bg-gray-900 rounded-2xl flex items-center justify-center overflow-hidden">
+            <img
+              src="/lovable-uploads/f43bf002-81d1-4955-8f29-4894e90b5f65.png"
+              alt="Tusharkanta Behera"
+              className="w-full h-full object-cover rounded-xl"
+            />
           </div>
           {/* Data Flow Animation */}
           <div className="absolute -inset-2 sm:-inset-4">
