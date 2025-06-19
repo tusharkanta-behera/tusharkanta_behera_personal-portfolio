@@ -44,8 +44,12 @@ export const About = () => {
               <div className={`absolute inset-0 transition-transform duration-700 transform-style-preserve-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
                 {/* Front of card */}
                 <div className="absolute inset-0 backface-hidden bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-lg border border-blue-500/30 rounded-2xl p-6 sm:p-8 flex flex-col items-center justify-center text-center">
-                  <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-4 sm:mb-6 flex items-center justify-center">
-                    <User className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
+                  <div className="w-32 h-32 sm:w-40 sm:h-40 mb-4 sm:mb-6 rounded-full overflow-hidden border-4 border-gradient-to-r from-blue-500 to-cyan-500 bg-gradient-to-r from-blue-500 to-cyan-500 p-1">
+                    <img
+                      src="/lovable-uploads/f43bf002-81d1-4955-8f29-4894e90b5f65.png"
+                      alt="Tusharkanta Behera"
+                      className="w-full h-full object-cover rounded-full"
+                    />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Tusharkanta Behera</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">Tech Enthusiast & Security Researcher</p>

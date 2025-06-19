@@ -36,19 +36,19 @@ export const Contact = () => {
     {
       name: "Email",
       icon: <Mail className="w-5 h-5 sm:w-6 sm:h-6" />,
-      url: "mailto:tusharkanta.behera@example.com",
+      url: "mailto:tusharkantabehera85@gmail.com",
       color: "from-red-500 to-red-600"
     },
     {
       name: "GitHub",
       icon: <Github className="w-5 h-5 sm:w-6 sm:h-6" />,
-      url: "https://github.com/tusharkanta",
+      url: "https://github.com/tusharkanta-behera",
       color: "from-gray-600 to-gray-800"
     },
     {
       name: "LinkedIn",
       icon: <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />,
-      url: "https://linkedin.com/in/tusharkanta-behera",
+      url: "https://linkedin.com/in/tusharkanta-behera-7a3011294",
       color: "from-blue-600 to-blue-700"
     }
   ];
@@ -200,9 +200,9 @@ export const Contact = () => {
                   <div className="min-w-0 flex-1">
                     <h4 className="font-semibold text-white text-sm sm:text-base">{link.name}</h4>
                     <p className="text-gray-400 text-xs sm:text-sm truncate">
-                      {link.name === "Email" ? "tusharkanta.behera@example.com" :
-                       link.name === "GitHub" ? "github.com/tusharkanta" :
-                       "linkedin.com/in/tusharkanta-behera"}
+                      {link.name === "Email" ? "tusharkantabehera85@gmail.com" :
+                       link.name === "GitHub" ? "github.com/tusharkanta-behera" :
+                       "linkedin.com/in/tusharkanta-behera-7a3011294"}
                     </p>
                   </div>
                 </a>
