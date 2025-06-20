@@ -13,8 +13,10 @@ export const Navigation = ({ activeSection }: NavigationProps) => {
   const navItems = [
     { id: "hero", label: "Home" },
     { id: "about", label: "About" },
-    { id: "projects", label: "Projects" },
+    { id: "experience", label: "Experience" },
+    { id: "certificates", label: "Certificates" },
     { id: "skills", label: "Skills" },
+    { id: "projects", label: "Projects" },
     { id: "contact", label: "Contact" }
   ];
 
@@ -51,7 +53,8 @@ export const Navigation = ({ activeSection }: NavigationProps) => {
             <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">TB</span>
             </div>
-            <span className="font-bold text-lg text-white">Tusharkanta Behera</span>
+            <span className="font-bold text-lg text-white hidden sm:block">Tusharkanta Behera</span>
+            <span className="font-bold text-lg text-white sm:hidden">Tusharkanta</span>
           </div>
 
           {/* Desktop Navigation */}

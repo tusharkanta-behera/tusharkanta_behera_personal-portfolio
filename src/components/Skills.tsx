@@ -38,17 +38,6 @@ export const Skills = () => {
         { name: "Model Optimization", level: 84, icon: "🎯" }
       ],
       color: "from-green-500 to-green-600"
-    },
-    {
-      name: "Development",
-      skills: [
-        { name: "Flask", level: 83, icon: "🌶️" },
-        { name: "React", level: 87, icon: "⚛️" },
-        { name: "JavaScript", level: 85, icon: "🟨" },
-        { name: "Git", level: 89, icon: "📝" },
-        { name: "API Development", level: 81, icon: "🔌" }
-      ],
-      color: "from-purple-500 to-purple-600"
     }
   ];
 
@@ -101,7 +90,7 @@ export const Skills = () => {
               {skillCategories.map((category, categoryIndex) => (
                 <div key={categoryIndex} className="absolute inset-0">
                   {category.skills.map((skill, skillIndex) => {
-                    const angle = (skillIndex * 72 + categoryIndex * 18) * (Math.PI / 180);
+                    const angle = (skillIndex * 72 + categoryIndex * 24) * (Math.PI / 180);
                     const radius = (skill.level / 100) * 120;
                     const x = Math.cos(angle) * radius;
                     const y = Math.sin(angle) * radius;

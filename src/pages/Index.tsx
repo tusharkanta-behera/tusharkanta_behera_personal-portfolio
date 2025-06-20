@@ -2,18 +2,21 @@
 import { useEffect, useRef, useState } from "react";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
-import { Projects } from "@/components/Projects";
+import { Experience } from "@/components/Experience";
+import { Certificates } from "@/components/Certificates";
 import { Skills } from "@/components/Skills";
+import { Projects } from "@/components/Projects";
 import { Contact } from "@/components/Contact";
 import { Navigation } from "@/components/Navigation";
 import { SpaceBackground } from "@/components/SpaceBackground";
+import { Chatbot } from "@/components/Chatbot";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["hero", "about", "projects", "skills", "contact"];
+      const sections = ["hero", "about", "experience", "certificates", "skills", "projects", "contact"];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -46,18 +49,28 @@ const Index = () => {
           <About />
         </section>
         
-        <section id="projects">
-          <Projects />
+        <section id="experience">
+          <Experience />
+        </section>
+        
+        <section id="certificates">
+          <Certificates />
         </section>
         
         <section id="skills">
           <Skills />
         </section>
         
+        <section id="projects">
+          <Projects />
+        </section>
+        
         <section id="contact">
           <Contact />
         </section>
       </main>
+
+      <Chatbot />
     </div>
   );
 };

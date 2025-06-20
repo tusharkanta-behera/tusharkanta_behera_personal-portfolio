@@ -22,8 +22,12 @@ export const Hero = () => {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  const scrollToAbout = () => {
-    document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+  const scrollToExperience = () => {
+    document.getElementById("experience")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const downloadResume = () => {
+    window.open("https://drive.google.com/file/d/1swmV3R16jUK6JoSSqqM2FUyo6dyh1dWr/view", "_blank");
   };
 
   return (
@@ -35,33 +39,22 @@ export const Hero = () => {
       </div>
 
       <div className="container mx-auto text-center relative z-10">
-        {/* 3D Avatar/Logo */}
+        {/* Circular Profile Image */}
         <div 
           ref={avatarRef}
           className="mb-6 sm:mb-8 mx-auto w-32 h-32 sm:w-48 sm:h-48 relative transition-transform duration-300 ease-out"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-600 rounded-2xl rotate-45 animate-spin-slow"></div>
-          <div className="absolute inset-1 sm:inset-2 bg-gray-900 rounded-2xl flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0 rounded-full border-4 border-gradient-to-r from-blue-500 via-cyan-500 to-blue-600 animate-pulse"></div>
+          <div className="absolute inset-1 rounded-full border-2 border-blue-400/50"></div>
+          <div className="absolute inset-2 rounded-full overflow-hidden bg-gray-900">
             <img
               src="/lovable-uploads/6470e9b8-1d2f-4c8e-bf7d-4244f503c546.png"
               alt="Tusharkanta Behera"
-              className="w-full h-full object-cover rounded-xl"
+              className="w-full h-full object-cover rounded-full"
             />
           </div>
-          {/* Data Flow Animation */}
-          <div className="absolute -inset-2 sm:-inset-4">
-            {[...Array(8)].map((_, i) => (
-              <div
-                key={i}
-                className="absolute w-1 h-1 sm:w-2 sm:h-2 bg-cyan-400 rounded-full animate-ping"
-                style={{
-                  top: `${Math.sin(i * Math.PI / 4) * 60 + 50}%`,
-                  left: `${Math.cos(i * Math.PI / 4) * 60 + 50}%`,
-                  animationDelay: `${i * 200}ms`,
-                }}
-              />
-            ))}
-          </div>
+          {/* Rotating Border Animation */}
+          <div className="absolute -inset-2 rounded-full border-2 border-transparent bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-600 animate-spin-slow opacity-75"></div>
         </div>
 
         {/* Main Text */}
@@ -97,12 +90,15 @@ export const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mt-6 sm:mt-8 px-4">
             <button 
-              onClick={scrollToAbout}
+              onClick={scrollToExperience}
               className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
             >
               Explore My Work
             </button>
-            <button className="w-full sm:w-auto px-6 sm:px-8 py-3 border border-blue-500/30 text-blue-400 rounded-lg font-semibold hover:bg-blue-500/10 transition-all duration-300 backdrop-blur-sm">
+            <button 
+              onClick={downloadResume}
+              className="w-full sm:w-auto px-6 sm:px-8 py-3 border border-blue-500/30 text-blue-400 rounded-lg font-semibold hover:bg-blue-500/10 transition-all duration-300 backdrop-blur-sm"
+            >
               Download Resume
             </button>
           </div>
