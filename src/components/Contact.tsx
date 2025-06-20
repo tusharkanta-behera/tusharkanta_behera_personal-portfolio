@@ -61,7 +61,7 @@ export const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Contact Form */}
           <div className="order-2 lg:order-1">
-            <div className="bg-white/5 backdrop-blur-lg border border-gray-700/30 rounded-2xl p-6 sm:p-8">
+            <div className="bg-white/5 backdrop-blur-lg border border-gray-700/30 rounded-2xl p-6 sm:p-8 hover:border-blue-500/30 transition-all duration-300">
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center space-x-2">
                 <Send className="w-6 h-6 text-blue-400" />
                 <span>Send a Message</span>
@@ -146,66 +146,77 @@ export const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Information */}
+          {/* Connect With Me Section */}
           <div className="order-1 lg:order-2">
             <div className="space-y-6 sm:space-y-8">
               <div className="bg-white/5 backdrop-blur-lg border border-gray-700/30 rounded-2xl p-6 sm:p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Connect With Me</h3>
+                <h3 className="text-2xl font-bold text-white mb-6 text-center">Connect With Me</h3>
                 
                 <div className="space-y-4">
-                  <div className="flex items-center space-x-4">
-                    <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg">
-                      <Mail className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-gray-300 text-sm">Email</p>
-                      <p className="text-white font-medium">tusharkantabehera85@gmail.com</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center space-x-4">
-                    <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg">
-                      <Github className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-gray-300 text-sm">GitHub</p>
-                      <a 
-                        href="https://github.com/tusharkanta-behera" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-white font-medium hover:text-blue-400 transition-colors duration-300"
-                      >
-                        github.com/tusharkanta-behera
-                      </a>
+                  {/* Email */}
+                  <div className="group bg-gray-800/30 border border-gray-700/50 rounded-xl p-4 hover:border-red-500/50 hover:bg-red-500/10 transition-all duration-300 transform hover:scale-105 cursor-pointer">
+                    <div className="flex items-center space-x-4">
+                      <div className="p-3 bg-red-500 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                        <Mail className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-white font-semibold mb-1">Email</p>
+                        <p className="text-gray-300 text-sm group-hover:text-white transition-colors duration-300">
+                          tusharkantabehera85@gmail.com
+                        </p>
+                      </div>
                     </div>
                   </div>
-                  
-                  <div className="flex items-center space-x-4">
-                    <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg">
-                      <Linkedin className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-gray-300 text-sm">LinkedIn</p>
-                      <a 
-                        href="https://linkedin.com/in/tusharkanta-behera-7a3011294" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-white font-medium hover:text-blue-400 transition-colors duration-300"
-                      >
-                        linkedin.com/in/tusharkanta-behera-7a3011294
-                      </a>
-                    </div>
+
+                  {/* GitHub */}
+                  <div className="group bg-gray-800/30 border border-gray-700/50 rounded-xl p-4 hover:border-gray-400/50 hover:bg-gray-600/10 transition-all duration-300 transform hover:scale-105 cursor-pointer">
+                    <a 
+                      href="https://github.com/tusharkanta-behera" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-4"
+                    >
+                      <div className="p-3 bg-gray-600 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                        <Github className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-white font-semibold mb-1">GitHub</p>
+                        <p className="text-gray-300 text-sm group-hover:text-white transition-colors duration-300">
+                          github.com/tusharkanta-behera
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  {/* LinkedIn */}
+                  <div className="group bg-gray-800/30 border border-gray-700/50 rounded-xl p-4 hover:border-blue-500/50 hover:bg-blue-500/10 transition-all duration-300 transform hover:scale-105 cursor-pointer">
+                    <a 
+                      href="https://linkedin.com/in/tusharkanta-behera-7a3011294" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-4"
+                    >
+                      <div className="p-3 bg-blue-600 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                        <Linkedin className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-white font-semibold mb-1">LinkedIn</p>
+                        <p className="text-gray-300 text-sm group-hover:text-white transition-colors duration-300">
+                          linkedin.com/in/tusharkanta-behera-7a3011294
+                        </p>
+                      </div>
+                    </a>
                   </div>
                 </div>
               </div>
 
               {/* Quick Stats */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="bg-white/5 backdrop-blur-lg border border-gray-700/30 rounded-xl p-4 sm:p-6 text-center">
+                <div className="bg-white/5 backdrop-blur-lg border border-gray-700/30 rounded-xl p-4 sm:p-6 text-center hover:border-blue-500/30 transition-all duration-300">
                   <div className="text-2xl sm:text-3xl font-bold text-blue-400 mb-2">50+</div>
                   <div className="text-gray-300 text-sm sm:text-base">Projects Completed</div>
                 </div>
-                <div className="bg-white/5 backdrop-blur-lg border border-gray-700/30 rounded-xl p-4 sm:p-6 text-center">
+                <div className="bg-white/5 backdrop-blur-lg border border-gray-700/30 rounded-xl p-4 sm:p-6 text-center hover:border-cyan-500/30 transition-all duration-300">
                   <div className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-2">24/7</div>
                   <div className="text-gray-300 text-sm sm:text-base">Available</div>
                 </div>

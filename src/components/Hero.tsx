@@ -39,22 +39,26 @@ export const Hero = () => {
       </div>
 
       <div className="container mx-auto text-center relative z-10">
-        {/* Circular Profile Image */}
+        {/* Enhanced Circular Profile Image */}
         <div 
           ref={avatarRef}
-          className="mb-6 sm:mb-8 mx-auto w-32 h-32 sm:w-48 sm:h-48 relative transition-transform duration-300 ease-out"
+          className="mb-6 sm:mb-8 mx-auto w-40 h-40 sm:w-56 sm:h-56 relative transition-transform duration-300 ease-out"
         >
-          <div className="absolute inset-0 rounded-full border-4 border-gradient-to-r from-blue-500 via-cyan-500 to-blue-600 animate-pulse"></div>
-          <div className="absolute inset-1 rounded-full border-2 border-blue-400/50"></div>
-          <div className="absolute inset-2 rounded-full overflow-hidden bg-gray-900">
+          {/* Animated rotating border */}
+          <div className="absolute -inset-3 rounded-full bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-600 animate-spin-slow opacity-75 blur-sm"></div>
+          <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 animate-pulse"></div>
+          
+          {/* Main image container */}
+          <div className="relative w-full h-full rounded-full border-4 border-blue-500/50 overflow-hidden bg-transparent backdrop-blur-sm">
             <img
-              src="/lovable-uploads/6470e9b8-1d2f-4c8e-bf7d-4244f503c546.png"
+              src="/lovable-uploads/02080aaa-2e5c-4185-ad60-95a85881ffa9.png"
               alt="Tusharkanta Behera"
-              className="w-full h-full object-cover rounded-full"
+              className="w-full h-full object-cover rounded-full scale-110 brightness-110 contrast-110"
             />
           </div>
-          {/* Rotating Border Animation */}
-          <div className="absolute -inset-2 rounded-full border-2 border-transparent bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-600 animate-spin-slow opacity-75"></div>
+          
+          {/* Additional glow effect */}
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 animate-pulse"></div>
         </div>
 
         {/* Main Text */}

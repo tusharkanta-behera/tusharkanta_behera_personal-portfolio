@@ -47,6 +47,10 @@ export const About = () => {
     }
   ];
 
+  const downloadResume = () => {
+    window.open("https://drive.google.com/file/d/1swmV3R16jUK6JoSSqqM2FUyo6dyh1dWr/view", "_blank");
+  };
+
   return (
     <div className="min-h-screen py-16 sm:py-20 px-4 sm:px-6">
       <div className="container mx-auto max-w-6xl">
@@ -87,7 +91,10 @@ export const About = () => {
                     Dedicated technology professional with expertise spanning data analytics, cybersecurity, and AI. 
                     Passionate about leveraging cutting-edge technologies to solve complex problems and drive innovation.
                   </p>
-                  <button className="w-full px-3 sm:px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center space-x-2 text-sm sm:text-base">
+                  <button 
+                    onClick={downloadResume}
+                    className="w-full px-3 sm:px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center space-x-2 text-sm sm:text-base transform hover:scale-105"
+                  >
                     <Download className="w-3 h-3 sm:w-4 sm:h-4" />
                     <span>Download Resume</span>
                   </button>
