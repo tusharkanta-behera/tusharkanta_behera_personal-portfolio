@@ -7,39 +7,68 @@ export const Certificates = () => {
 
   const certificates = [
     {
-      title: "Certified Ethical Hacker (CEH)",
-      issuer: "EC-Council",
-      date: "2024",
-      description: "Advanced penetration testing and ethical hacking certification",
-      color: "from-red-500 to-pink-500"
+      title: "Prompt Engineering",
+      issuer: "Infosys",
+      date: "June 22, 2025",
+      description: "Advanced prompt engineering techniques and AI optimization",
+      color: "from-blue-500 to-cyan-500",
+      image: "/lovable-uploads/c78081a4-cd17-432d-8d79-48bf129e9123.png"
     },
     {
-      title: "Python for Data Analytics",
-      issuer: "IBM",
-      date: "2024",
-      description: "Comprehensive data analysis and visualization with Python",
-      color: "from-blue-500 to-cyan-500"
+      title: "Learning Microsoft Power BI",
+      issuer: "Infosys",
+      date: "June 23, 2025",
+      description: "Data visualization and business intelligence with Power BI",
+      color: "from-purple-500 to-indigo-500",
+      image: "/lovable-uploads/266787b3-5b93-4f35-85ee-e85550055da3.png"
     },
     {
-      title: "Cybersecurity Fundamentals",
-      issuer: "Cisco",
-      date: "2024",
-      description: "Core cybersecurity principles and network security",
-      color: "from-purple-500 to-indigo-500"
+      title: "Excel",
+      issuer: "Infosys",
+      date: "June 21, 2025",
+      description: "Advanced Excel skills for data analysis and visualization",
+      color: "from-green-500 to-teal-500",
+      image: "/lovable-uploads/93037309-e345-4e55-b3bb-f265b1294a6c.png"
     },
     {
-      title: "AI & Machine Learning",
-      issuer: "Google",
-      date: "2024",
-      description: "Advanced AI concepts and machine learning algorithms",
-      color: "from-green-500 to-teal-500"
+      title: "Foundations of Cybersecurity",
+      issuer: "Google via Coursera",
+      date: "Dec 29, 2023",
+      description: "Core cybersecurity principles and network security fundamentals",
+      color: "from-red-500 to-pink-500",
+      image: "/lovable-uploads/382424a5-2727-4b5d-ac4c-65863cb85284.png"
     },
     {
-      title: "Cloud Security",
-      issuer: "Microsoft",
-      date: "2024",
-      description: "Cloud infrastructure security and compliance",
-      color: "from-orange-500 to-red-500"
+      title: "Play It Safe: Manage Security Risks",
+      issuer: "Google via Coursera",
+      date: "Mar 20, 2024",
+      description: "Risk management and security assessment strategies",
+      color: "from-orange-500 to-red-500",
+      image: "/lovable-uploads/1d15688b-57e7-408b-856c-f24db7e9dbcc.png"
+    },
+    {
+      title: "Connect and Protect: Networks and Network Security",
+      issuer: "Google via Coursera",
+      date: "Mar 20, 2024",
+      description: "Network security architecture and protection mechanisms",
+      color: "from-cyan-500 to-blue-500",
+      image: "/lovable-uploads/0680a056-4384-4585-8fb1-9c8953f9bc3d.png"
+    },
+    {
+      title: "Web Application Security",
+      issuer: "CyberYaan Training & Consultancy",
+      date: "June 30, 2024",
+      description: "Advanced web application security testing and vulnerability assessment",
+      color: "from-indigo-500 to-purple-500",
+      image: "/lovable-uploads/b3ac344f-99ce-4399-b990-d7833cba727f.png"
+    },
+    {
+      title: "Network Penetration Testing",
+      issuer: "CyberYaan Training & Consultancy",
+      date: "June 30, 2024",
+      description: "Advanced network penetration testing methodologies and tools",
+      color: "from-pink-500 to-red-500",
+      image: "/lovable-uploads/4151e235-5e50-46b3-9dfa-7c987d2200b1.png"
     }
   ];
 
@@ -151,8 +180,11 @@ export const Certificates = () => {
             </button>
           </div>
 
-          {/* Swipe Instructions */}
+          {/* Certificate Details */}
           <div className="text-center mt-6">
+            <p className="text-gray-400 text-sm mb-2">
+              Certificate {activeIndex + 1} of {certificates.length}
+            </p>
             <p className="text-gray-400 text-sm">Click on cards or use navigation to explore certificates</p>
           </div>
         </div>
